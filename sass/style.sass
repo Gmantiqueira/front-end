@@ -1,0 +1,305 @@
+$light-base: rgba(52, 169, 254, 1)
+$light-90: rgba(52, 169, 254, 0.1)
+$light-80: rgba(52, 169, 254, 0.2)
+$light-60: rgba(52, 169, 254, 0.4)
+$light-50: rgba(52, 169, 254, 0.5)
+
+$middle-base: rgba(13, 123, 202, 1)
+$middle-90: rgba(13, 123, 202, 0.1)
+$middle-80: rgba(13, 123, 202, 0.2)
+$middle-60: rgba(13, 123, 202, 0.4)
+$middle-50: rgba(13, 123, 202, 0.5)
+
+$dark-base: rgba(53, 67, 94, 1)
+$dark-90: rgba(53, 67, 94, 0.1)
+$dark-80: rgba(53, 67, 94, 0.2)
+$dark-60: rgba(53, 67, 94, 0.4)
+$dark-50: rgba(53, 67, 94, 0.5)
+$main-font: Circular
+
+@font-face
+    font-family: Circular
+    src: url('../fonts/CircularStd-Medium.woff')
+
+@font-face
+    font-family: Circular
+    src: url('../fonts/CircularStd-Bold.woff')
+    font-weight: bold
+
+.clear
+    clear: both
+
+body, h4, h3, h2, h1, p, ul, li
+    font-family: $main_font
+    height: 100%
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    color: $dark-base
+
+h1
+    font-size: 63px
+    font-weight: bold
+h2
+    font-size: 45px
+    font-weight: bold
+h3
+    font-size: 31px
+    font-weight: bold
+h4
+    font-size: 22px
+    font-weight: bold
+h5
+    font-size: 16px
+    font-weight: bold
+
+.col-1-3
+    width: calc(100%/3)
+    float: left
+
+header
+    width: 100%
+    padding-top: 32px
+    padding-bottom: 32px
+    position: fixed
+    background-color: #FFF
+    top: 0
+
+    .menu-mobile
+        display: none
+
+    div
+        width: 78px
+        float: left
+        margin-left: 64px
+    ul
+        margin-top: 16px
+        padding-right: 64px
+        float: right
+        list-style: none
+
+        li
+            margin-left: 64px
+            display: inline-block
+
+            a
+                text-decoration: none
+                color: $dark-base
+
+                &:hover
+                    color: $light-base
+                    transition: color 0.1s ease-in-out
+
+.home
+    height: calc(100vh - 192px)
+    padding-top: 192px
+
+    .intro-wraper
+        width: 50%
+        float: left
+
+        h2
+            margin-left: 64px
+
+        p
+            margin-left: 64px
+            margin-top: 64px
+            width: 80%
+    
+    .photo-wraper
+        width: 50%
+        float: right
+        text-align: center
+
+        img
+            background-color: #FFF
+            width: 384px
+            height: 384px
+            display: inline-block
+            border-radius: 192px
+            border: 1px solid gray
+
+.about
+    height: 50vh
+    background-color: $light-80
+    padding: 64px
+    
+    .col-1-2
+        width: 50%
+        float: left
+
+        .education
+            
+            ul
+
+                li
+                    margin-top: 16px
+                    margin-left: 16px
+
+                p
+                    color: $dark-50
+      
+
+        .hobbies
+            margin-top: 96px
+
+            ul
+                margin-top: 16px
+                padding-left: 16px
+
+                li
+                    margin-top: 8px
+
+        .tools
+            ul
+                margin-top: 16px
+                padding-left: 16px
+                
+                li
+                    margin-top: 16px
+
+        .skills
+            margin-top: 64px
+
+            ul
+                margin-top: 16px
+                padding-left: 16px
+
+                li
+                    margin-top: 16px
+
+.works
+    padding: 64px
+
+    div
+        height: 80%
+        text-align: center
+        margin-left: 15%
+        margin-top: 32px
+        
+        div
+            display: inline-block
+            width: 20%
+
+            img
+                margin-top: 32px
+                width: 100%
+                height: 100%
+                background-color: #CCC
+            
+            h4, p
+                text-align: left
+
+            p 
+                margin-top: 16px
+
+    div:nth-of-type(1)
+        margin-left: 0
+
+.contact
+    background-color: $light-80
+    text-align: center
+    padding: 32px
+
+    .icons-wraper
+        margin-top: 32px
+        h1
+            margin: 0 32px
+            color: $dark-50
+
+    .whats-wraper
+        margin-top: 32px
+        h1, h4
+            display: inline-block 
+            color: $dark-60
+
+        h1
+            margin-top: 32px
+            
+@media screen and (max-width:1240px)
+    .home
+        height: auto
+        padding: 64px
+        padding-top: 128px
+
+        .photo-wraper
+            float: none
+            margin: 0 auto
+            width: 100%
+
+        .intro-wraper
+            float: none
+            width: 100%
+
+            h2, p
+                margin: 0 auto
+                margin-top: 16px
+                text-align: center
+                width: 90%
+
+    .works
+        .works-wraper
+            margin: 0
+            div
+                width: 80%
+                margin: 0
+                margin-top: 32px
+
+
+                
+
+
+
+@media screen and (max-width: 760px)
+    header
+        ul
+            display: none
+        .menu-mobile
+            display: block
+            float: right
+
+    .about
+        height: auto
+
+        .col-1-2
+            width: 100%
+            float: none
+
+            div
+                width: 100%
+            
+            .tools, .hobbies, .skills
+                margin-top: 64px
+        
+        .col-1-3
+            float: none
+
+@media screen and (max-width: 700px)
+        
+    .home
+        padding: 128px 16px 64px
+
+        .photo-wraper
+
+            img
+                width: 240px
+                height: 240px
+
+        .intro-wraper
+
+            h2
+                width: 100%
+                font-size: 31px
+
+            p
+                width: 100%
+
+@media screen and (max-width: 440px)
+
+    .works
+        padding: 32px
+    
+    .icons-wraper
+        h1
+            margin: 0 32px
+            font-size: 31px
